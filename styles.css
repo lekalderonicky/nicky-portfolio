@@ -1,0 +1,18 @@
+/* Simple responsive portfolio styles */
+:root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg),#071025);color:#e6eef6}
+.container{max-width:980px;margin:0 auto;padding:32px}
+.header{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-size:1.2rem}
+.nav{display:flex;gap:16px}
+.hamburger{display:none}
+.hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;margin-top:36px}
+.card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.project-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px;display:flex;flex-direction:column;gap:8px}
+.project-card img{width:100%;height:140px;object-fit:cover;border-radius:8px;background:linear-gradient(90deg,var(--accent),#0ea5a0)}
+footer{margin-top:36px;opacity:0.9}
+.footer-content{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.socials span{color:var(--muted);margin-left:12px}
+@media (max-width:880px){.hero{grid-template-columns:1fr}.nav{display:none}.hamburger{display:block}.footer-content{flex-direction:column;align-items:flex-start}}

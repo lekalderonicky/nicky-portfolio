@@ -1,0 +1,15 @@
+# Node / build
+node_modules/
+dist/
+npm-debug.log*
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore local environment
+.env
