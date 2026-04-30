@@ -25,7 +25,7 @@
         <div>
           <div class="card">
             <h1>Hi — I'm Nicky</h1>
-            <p>Frontend developer and designer. I build fast, accessible web experiences. Replace this text with your short bio.</p>
+            <p>Frontend developer and designer. I build fast, accessible web experiences.</p>
             <p><strong>Email:</strong> lekalderonicky@gmail.com</p>
             <p>See my projects →</p>
           </div>
@@ -34,25 +34,41 @@
             <article class="project-card">
               <img src="assets/images/project1.svg" alt="Project One image"/>
               <h3>Project One</h3>
-              <p>Placeholder project — replace with your description.</p>
+              <p>Automating systems. Scaling ideas. Simplifying deployment.”
+“Turning code into reliable, scalable systems.”
+“Bridging development and operations through automation.”</p>
               <p class="project-view">View project →</p>
             </article>
             <article class="project-card">
               <img src="assets/images/project2.svg" alt="Project Two image"/>
               <h3>Project Two</h3>
-              <p>Placeholder project — replace with your description.</p>
+              <p>DevOps Engineer | CI/CD | Automation | Cloud & Infrastructure
+Aspiring DevOps Engineer | Git | Docker | CI/CD | Cloud Learning
+DevOps Enthusiast | Building Scalable Systems | Automation & Deployment
+DevOps Engineer in Progress | Bridging Development & Operations</p>
               <p class="project-view">View project →</p>
             </article>
             <article class="project-card">
               <img src="assets/images/project3.svg" alt="Project Three image"/>
               <h3>Project Three</h3>
-              <p>Placeholder project — replace with your description.</p>
+              <p>I am a DevOps-focused engineer passionate about building, automating, and optimizing reliable systems. My work revolves around bridging development and operations—ensuring smooth code integration, efficient deployment pipelines, and stable production environments.
+
+I have hands-on experience with Git and collaborative version control workflows, and I’m actively developing skills in CI/CD, infrastructure management, and automation. I approach problems with a systems mindset, focusing on scalability, performance, and reducing manual processes through tooling and scripting.
+
+My interest in DevOps goes beyond tools—I value the culture of continuous improvement, monitoring, and rapid iteration. I aim to design workflows that are not only efficient but also resilient and easy to maintain.
+
+My goal is to grow into a well-rounded DevOps engineer capable of managing the full lifecycle of applications—from development to deployment and beyond.</p>
               <p class="project-view">View project →</p>
             </article>
           </section>
         </div>
 
         <aside>
+          <!-- Profile image placeholder (responsive picture with fallback) -->
+          <picture>
+            <!-- Add WebP/AVIF files later for better performance -->
+            <img id="profile-img" class="profile-img" src="assets/images/headshot.jpg" alt="Nicky headshot" width="240" height="240">
+          </picture>
           <div class="card">
             <h3>Skills</h3>
             <ul>
@@ -66,12 +82,32 @@
 
       <section id="about" class="card" style="margin-top:20px">
         <h2>About</h2>
-        <p>Write a few sentences about your background, passions, and what you're looking for.</p>
+        <p>I’m a technology-driven problem solver focused on building efficient, reliable systems. I specialize in frontend engineering and am growing my DevOps skills to better own the full delivery lifecycle.</p>
+        <ul>
+          <li>Frontend: HTML, CSS, JavaScript, React</li>
+          <li>Performance: accessible, fast user experiences</li>
+          <li>DevOps fundamentals: CI/CD, automation, version control</li>
+        </ul>
+        <p>I like working on projects that bridge design and systems thinking — shipping things that are delightful to use and simple to operate.</p>
+        <p><a href="resume.html" target="_blank" rel="noopener">Download resume</a></p>
       </section>
 
       <section id="contact" class="card" style="margin-top:20px">
         <h2>Contact</h2>
-        <p>Prefer email: lekalderonicky@gmail.com</p>
+        <p>Prefer email: <a href="mailto:lekalderonicky@gmail.com">lekalderonicky@gmail.com</a></p>
+        <form id="contact-form" class="contact-form" aria-label="Contact form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Nicky" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="lekalderonicky@gmail.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Hi Nicky, I'd like to work with you..." required></textarea>
+
+          <button type="submit">Send (opens email)</button>
+          <p id="contact-note" class="muted" style="margin-top:8px;">This will open your mail client to send a message.</p>
+        </form>
       </section>
     </main>
 
@@ -79,9 +115,9 @@
       <div class="footer-content">
         <small>© 2026 Nicky</small>
         <div class="socials">
-          <span>GitHub</span>
-          <span>LinkedIn</span>
-          <span>Twitter</span>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
         </div>
       </div>
     </footer>
