@@ -20,6 +20,20 @@ footer{margin-top:36px;opacity:0.9}
 .contact-form button{background:var(--accent);color:#071025;padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
 .socials a{color:var(--muted);margin-left:12px;text-decoration:none}
 .socials a:hover{text-decoration:underline;color:var(--accent)}
-.footer-content{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.socials span{color:var(--muted);margin-left:12px}
-@media (max-width:880px){.hero{grid-template-columns:1fr}.nav{display:none}.hamburger{display:block}.footer-content{flex-direction:column;align-items:flex-start}}
+.project-tech{display:flex;gap:6px;margin:8px 0;flex-wrap:wrap}
+.tech-tag{background:var(--accent);color:#071025;padding:2px 8px;border-radius:12px;font-size:0.75rem;font-weight:500}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.skill-category h4{margin:0 0 8px 0;font-size:0.9rem;color:var(--accent);font-weight:600}
+.skill-category ul{margin:0;padding:0;list-style:none}
+.skill-category li{margin-bottom:4px;font-size:0.85rem}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:16px 0}
+.about-item{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:8px;border-left:3px solid var(--accent)}
+.about-item h3{margin:0 0 8px 0;font-size:1rem}
+.about-item p{margin:0;font-size:0.9rem;color:var(--muted)}
+.hero-subtitle{color:var(--accent);font-size:1.1rem;margin:8px 0;font-weight:500}
+.hero-cta{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+.cta-button{background:var(--accent);color:#071025;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block;transition:transform 0.2s}
+.cta-button:hover{transform:translateY(-2px)}
+.cta-link{color:var(--accent);text-decoration:none;font-weight:500;padding:10px 0;border-bottom:1px solid transparent;transition:border-color 0.2s}
+.cta-link:hover{border-bottom-color:var(--accent)}
+@media (max-width:880px){.hero{grid-template-columns:1fr}.nav{display:none}.hamburger{display:block}.footer-content{flex-direction:column;align-items:flex-start}.skills-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.hero-cta{flex-direction:column}}
