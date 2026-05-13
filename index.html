@@ -9,15 +9,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="scroll-progress" id="scroll-progress"></div>
   <div class="container">
     <header class="header">
-      <div class="brand">Nicky</div>
+      <div class="brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Nicky</div>
       <nav id="nav" class="nav">
-        <span>About</span>
-        <span>Projects</span>
-        <span>Contact</span>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
-      <button id="menu-btn" class="hamburger">☰</button>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">🌙</button>
+        <button id="menu-btn" class="hamburger">☰</button>
+      </div>
     </header>
 
     <main>
@@ -34,8 +38,11 @@
           </div>
 
           <section id="projects" class="projects" aria-label="Projects">
-            <article class="project-card">
-              <img src="assets/images/project1.svg" alt="Portfolio Website"/>
+            <a href="#" class="project-card project-link" onclick="event.preventDefault(); alert('Visit project repository');">
+              <div class="project-image">
+                <img src="assets/images/project1.svg" alt="Portfolio Website"/>
+                <div class="project-overlay"></div>
+              </div>
               <h3>Portfolio Website</h3>
               <p>A responsive portfolio website built with HTML, CSS, and JavaScript. Features modern design, smooth animations, and optimized performance.</p>
               <div class="project-tech">
@@ -43,10 +50,13 @@
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
               </div>
-              <p class="project-view">View project →</p>
-            </article>
-            <article class="project-card">
-              <img src="assets/images/project2.svg" alt="DevOps Automation"/>
+              <p class="project-view">→ View project</p>
+            </a>
+            <a href="#" class="project-card project-link" onclick="event.preventDefault(); alert('Visit project repository');">
+              <div class="project-image">
+                <img src="assets/images/project2.svg" alt="DevOps Automation"/>
+                <div class="project-overlay"></div>
+              </div>
               <h3>CI/CD Pipeline</h3>
               <p>Automated deployment pipeline using GitHub Actions, Docker, and cloud infrastructure. Reduced deployment time by 70% and improved reliability.</p>
               <div class="project-tech">
@@ -54,10 +64,13 @@
                 <span class="tech-tag">GitHub Actions</span>
                 <span class="tech-tag">AWS</span>
               </div>
-              <p class="project-view">View project →</p>
-            </article>
-            <article class="project-card">
-              <img src="assets/images/project3.svg" alt="Infrastructure Monitoring"/>
+              <p class="project-view">→ View project</p>
+            </a>
+            <a href="#" class="project-card project-link" onclick="event.preventDefault(); alert('Visit project repository');">
+              <div class="project-image">
+                <img src="assets/images/project3.svg" alt="Infrastructure Monitoring"/>
+                <div class="project-overlay"></div>
+              </div>
               <h3>System Monitoring Dashboard</h3>
               <p>Real-time monitoring solution with Grafana and Prometheus. Built for tracking application performance, server health, and automated alerts.</p>
               <div class="project-tech">
@@ -65,8 +78,8 @@
                 <span class="tech-tag">Prometheus</span>
                 <span class="tech-tag">Kubernetes</span>
               </div>
-              <p class="project-view">View project →</p>
-            </article>
+              <p class="project-view">→ View project</p>
+            </a>
           </section>
         </div>
 
@@ -133,19 +146,26 @@
 
       <section id="contact" class="card" style="margin-top:20px">
         <h2>Contact</h2>
-        <p>Prefer email: <a href="mailto:lekalderonicky@gmail.com">lekalderonicky@gmail.com</a></p>
+        <p>Let's connect! I'm always open to interesting projects and collaboration opportunities.</p>
+        <p>Email: <a href="mailto:lekalderonicky@gmail.com" class="email-link">lekalderonicky@gmail.com</a></p>
         <form id="contact-form" class="contact-form" aria-label="Contact form">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Nicky" required>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="lekalderonicky@gmail.com" required>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="your.email@example.com" required>
+          </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Hi Nicky, I'd like to work with you..." required></textarea>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
 
-          <button type="submit">Send (opens email)</button>
-          <p id="contact-note" class="muted" style="margin-top:8px;">This will open your mail client to send a message.</p>
+          <button type="submit" class="submit-btn">Send Message</button>
+          <p id="contact-note" class="form-note" style="margin-top:8px;">✉️ This will open your mail client to send a message.</p>
         </form>
       </section>
     </main>
